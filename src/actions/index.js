@@ -13,3 +13,17 @@ export function fetchPosts() {
     payload: request
   };
 }
+
+export const ADD_POST = 'add_post';
+
+export function addPost(obj, callback) {
+  const request = axios.post(`${ROOT_URL}/posts${API_KEY}`, obj)
+    .then(() => {
+      callback();
+    })
+
+  return {
+    type: ADD_POST,
+    payload: request
+  };
+}

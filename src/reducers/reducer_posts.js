@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import { FETCH_POSTS } from '../actions/index';
+import { ADD_POST } from '../actions/index';
 
 export default function(state = {}, action) {
   switch (action.type) {
@@ -10,8 +11,11 @@ export default function(state = {}, action) {
 
       return retObj;
 
+    case ADD_POST:
+      console.log(action.payload);
+      return action.payload.data;
+
     default:
       return state;
   }
-
 }
