@@ -14,7 +14,11 @@ export default function(state = {}, action) {
       // newState[post.id] = post;
       // return newState;
 
-      return { ...state, [action.payload.data.id]: action.payload.data }
+      return { ...state, [action.payload.data.id]: action.payload.data };
+
+    case DELETE_POST:
+      const retObj = _.omit(state, action.payload);
+      return retObj;
 
     default:
       return state;
