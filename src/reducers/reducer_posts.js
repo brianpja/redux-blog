@@ -17,8 +17,7 @@ export default function(state = {}, action) {
       return { ...state, [action.payload.data.id]: action.payload.data };
 
     case DELETE_POST:
-      const retObj = _.omit(state, action.payload);
-      return retObj;
+      return _.omit(state, action.payload);
 
     default:
       return state;
