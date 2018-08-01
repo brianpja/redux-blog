@@ -6,7 +6,7 @@ Checkout this repo, install dependencies, then start the gulp process with the f
 
 ```
 > git clone https://github.com/brianpja/redux-blog.git
-> cd ReduxSimpleStarter
+> cd redux-blog
 > npm install
 > npm start
 ```
